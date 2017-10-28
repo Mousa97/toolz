@@ -638,6 +638,7 @@ if PY3:  # pragma: py2 no cover
         return tuple(x.name for x in pos_args)
 
     def signature_or_spec(func):
+      import inspect
         try:
             return inspect.signature(func)
         except (ValueError, TypeError) as e:
